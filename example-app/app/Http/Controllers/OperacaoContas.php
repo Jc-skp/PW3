@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-Class OperacaoContas extends Controller {
+Class OperacaoContasController extends Controller {
     public function soma (int $number1,int $number2) {
         $result = $number1 + $number2;
         echo "Soma = $result"; 
@@ -26,7 +26,7 @@ Class OperacaoContas extends Controller {
         $result3 = $number1 * $number2;
         $result4 = $number1 / $number2;
         echo "Soma = $result1";
-        echo "Soma = $result2";
+        echo "Subtração = $result2";
         echo "Soma = $result3";
         echo "Soma = $result4"; 
     }  
