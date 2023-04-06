@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\OperacaoContasController;
 use App\Http\Controllers\NomeController;
-
+use App\Http\Controllers\IdadeController
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,5 +32,9 @@ Route::get('/multiplicacao/{number1}/{number2}',[OperacaoContasController::class
 Route::get('/divisao/{number1}/{number2}',[OperacaoContasController::class, "divisao"]); 
 Route::get('/todas/{number1}/{number2}',[OperacaoContasController::class, "todas"])
 ->where('number1', '[0-9]+' )
-->where('number2', '[0-9]+' )
-; 
+->where('number2', '[0-9]+' ); 
+
+Route::get('/idade/{ano}/{mes}/{dia}', [IdadeController::class, 'idade'])
+->where('ano', '[0-9]{4}')
+->where('mes', '[0-9]{1,2}?')
+->where('dia', '[0-9]{1,2}?');
