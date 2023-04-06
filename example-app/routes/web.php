@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\OperacaoContasController;
 use App\Http\Controllers\NomeController;
-use App\Http\Controllers\IdadeController
+use App\Http\Controllers\IdadeController;
+
 use Illuminate\Support\Facades\Route;
 
 
