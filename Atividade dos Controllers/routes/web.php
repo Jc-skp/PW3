@@ -39,3 +39,4 @@ Route::get('/idade/{ano}/{mes}/{dia}', [IdadeController::class, 'idade'])
 ->where('ano', '[0-9]{4}')
 ->where('mes', '[0-9]{1,2}?')
 ->where('dia', '[0-9]{1,2}?');
+// 
