@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+
+
 class IdadeController extends Controller
 {
     public function idade ($ano,$mes,$dia) {
-        $dataAtual = new idade("now");
-        $nascimento = new idade($ano.$mes.$dia);
+        $dataAtual = Carbon::now('America/Sao_Paulo');
+        $nascimento = Carbon::createFromDate($ano, $mes, $dia, 'America/Sao_Paulo');
         $intervalo = $nascimento->diff($dataAtual);
 
         if($ano > $dataAtual->format('Y') || $ano == $dataAtual->format('Y')
@@ -26,6 +30,3 @@ class IdadeController extends Controller
         }
     }
     }
-
-    // America/Sao_Paulo
-    // Carbon::createFromDate($year, $month, $day, $tz);
